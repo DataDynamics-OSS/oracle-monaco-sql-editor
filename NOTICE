@@ -1,0 +1,70 @@
+oracle-monaco
+=============
+
+This project includes code adapted from third-party open-source software.
+
+-------------------------------------------------------------------------------
+trino-monaco (DataDynamics-OSS/trino-monaco-sql-editor)
+-------------------------------------------------------------------------------
+The editor component, setup, themes, editor options, completion provider,
+formatter scaffolding and build configuration are adapted from trino-monaco.
+
+  MIT License
+
+  Copyright (c) 2026 trino-monaco contributors
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+-------------------------------------------------------------------------------
+Monaco Editor (microsoft/monaco-editor)
+-------------------------------------------------------------------------------
+The Oracle Monarch tokenizer and language configuration in
+`src/oracle/language.ts` are adapted (via trino-monaco) from the Monaco Editor
+SQL language definition (`src/basic-languages/sql/sql.ts`), with modifications
+for Oracle SQL and PL/SQL.
+
+  The MIT License (MIT)
+
+  Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+-------------------------------------------------------------------------------
+Oracle documentation
+-------------------------------------------------------------------------------
+Keyword, function, operator, type, pseudo-column and package lists
+(`src/oracle/keywords.ts`) are compiled from the public Oracle Database SQL
+Language Reference and PL/SQL Language Reference. These are factual language
+elements.

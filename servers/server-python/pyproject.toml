@@ -1,0 +1,26 @@
+[project]
+name = "oracle-monaco-gateway"
+version = "0.0.1"
+description = "Reference gateway for oracle-monaco: per-user Oracle sessions over HTTP (FastAPI + python-oracledb Thin)"
+requires-python = ">=3.10"
+dependencies = [
+  "oracledb>=2.5",
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+oracle-monaco-gateway = "oracle_monaco_gateway.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["oracle_monaco_gateway"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

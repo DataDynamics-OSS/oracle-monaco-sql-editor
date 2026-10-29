@@ -1,0 +1,82 @@
+{
+  "name": "@datadynamics/oracle-monaco",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Oracle SQL / PL/SQL editor component built on Monaco Editor for React",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataDynamics-OSS/oracle-monaco-sql-editor.git"
+  },
+  "homepage": "https://github.com/DataDynamics-OSS/oracle-monaco-sql-editor#readme",
+  "bugs": {
+    "url": "https://github.com/DataDynamics-OSS/oracle-monaco-sql-editor/issues"
+  },
+  "main": "./dist/oracle-monaco.js",
+  "module": "./dist/oracle-monaco.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/oracle-monaco.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite --mode demo",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "build:demo": "tsc && vite build --mode demo",
+    "preview": "vite preview --mode demo",
+    "typecheck": "tsc --noEmit",
+    "test:scanner": "tsx scripts/test-scanner.ts",
+    "test:format": "tsx scripts/test-format.ts",
+    "test:keywords": "tsx scripts/test-keywords.ts",
+    "test": "tsx scripts/test-scanner.ts && tsx scripts/test-splitter.ts && tsx scripts/test-format.ts && tsx scripts/test-keywords.ts && tsx scripts/test-core.ts && tsx scripts/test-grammar.ts && tsx scripts/test-runner.ts && tsx scripts/test-metadata.ts && tsx scripts/test-signature.ts && tsx scripts/test-docs.ts",
+    "test:splitter": "tsx scripts/test-splitter.ts",
+    "gen:parser": "node scripts/gen-parser.mjs",
+    "test:core": "tsx scripts/test-core.ts",
+    "test:grammar": "tsx scripts/test-grammar.ts",
+    "test:runner": "tsx scripts/test-runner.ts",
+    "test:metadata": "tsx scripts/test-metadata.ts",
+    "test:signature": "tsx scripts/test-signature.ts",
+    "test:docs": "tsx scripts/test-docs.ts",
+    "check:doc-links": "tsx scripts/check-doc-links.ts",
+    "test:live": "tsx scripts/test-live.ts",
+    "test:live:ords": "tsx scripts/test-live-ords.ts",
+    "test:gateway": "npm --prefix servers/server-node test",
+    "gateway": "npm --prefix servers/server-node start"
+  },
+  "peerDependencies": {
+    "react": ">=17 || >=18 || >=19",
+    "react-dom": ">=17 || >=18 || >=19"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "antlr4-c3": "^3.4.4",
+    "antlr4ng": "^3.0.16",
+    "comlink": "^4.4.2",
+    "monaco-editor": "^0.52.2"
+  },
+  "devDependencies": {
+    "@fontsource/cascadia-code": "^5.3.0",
+    "@fontsource/fira-code": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/roboto-condensed": "^5.3.0",
+    "@fontsource/source-code-pro": "^5.3.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "antlr4ng-cli": "^2.0.0",
+    "d2coding": "^1.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.4.0"
+  }
+}
